@@ -3,22 +3,17 @@
     {{ $mainLogo:="/assets/images/main-logo.png" }}
     {{ $invertedLogo:="/assets/images/inverted-logo.png" }}
     {{ if .Site.Params.logo.main }}
-      {{ $mainLogo = .Site.Params.logo.main }}
+    {{ $mainLogo = .Site.Params.logo.main }}
     {{ end }}
     {{ if .Site.Params.logo.inverted }}
-      {{ $invertedLogo = .Site.Params.logo.inverted }}
+    {{ $invertedLogo = .Site.Params.logo.inverted }}
     {{ end }}
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
       <img src="{{ $invertedLogo }}" id="logo">
       {{- .Site.Title -}}
     </a>
-    <button
-      class="navbar-toggler navbar-dark"
-      id="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#top-nav-items"
-    >
+    <button class="navbar-toggler navbar-light" id="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#top-nav-items">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -28,38 +23,38 @@
           <a class="nav-link" href="#home">Home</a>
         </li>
         {{- if .Site.Data.sections }}
-          <!-- {{- range sort .Site.Data.sections "section.weight" }}
+        <!-- {{- range sort .Site.Data.sections "section.weight" }}
             {{ if and (.section.enable) (.section.showOnNavbar)}}
               <li class="nav-item">
                 <a class="nav-link" href="#{{ replace (lower .section.name) " " "-" }}">{{ .section.name }}</a>
               </li>
             {{ end }}
           {{- end }} -->
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#recent-posts">Recent Post</a>
-          </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#recent-posts">Recent Post</a>
+        </li>
         {{- end }}
         {{ $hasCustomMenus:= false }}
         {{ if and site.Params.customMenus }}
-          {{ if gt (len site.Params.customMenus) 0 }}
-            {{ $hasCustomMenus = true }}
-          {{ end }}
+        {{ if gt (len site.Params.customMenus) 0 }}
+        {{ $hasCustomMenus = true }}
+        {{ end }}
         {{ end }}
         {{ if (or site.Params.enableBlogPost $hasCustomMenus) }}
-          <div class="dropdown-divider" id="top-navbar-divider"></div>
+        <div class="dropdown-divider" id="top-navbar-divider"></div>
         {{ end }}
         {{ if site.Params.enableBlogPost }}
-          <li class="nav-item">
-            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+        </li>
         {{ end }}
         {{ range site.Params.customMenus }}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
+        </li>
         {{ end }}
       </ul>
     </div>

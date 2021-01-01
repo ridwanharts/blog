@@ -25,7 +25,7 @@ enableEmoji: true
 # Custom parameters
 params:
   # copyright
-  copyright: Made with ❤ at Jogja © 2020 .
+  copyright: Made with ❤ at Jogja © 2021
 
   # background image of the landing page
   background: "images/2020.jpg"
@@ -41,7 +41,7 @@ params:
   gitRepo: https://github.com/ridwanharts
 
   # specify whether you want to write blog post or not
-  enableBlogPost: false
+  enableBlogPost: true
 
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true

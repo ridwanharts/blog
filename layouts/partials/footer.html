@@ -1,6 +1,6 @@
-<footer class="container-fluid text-center align-content-center footer pb-2">
-  <div class="container pt-5">
-    <div class="row text-left">
+<footer class="container-fluid text-center align-content-center footer pb-1">
+  <div class="container">
+    <!-- <div class="row text-left">
       <div class="col-md-4 col-sm-12">
         <h5>Navigation</h5>
         {{ if .Site.Data.sections }}
@@ -26,7 +26,7 @@
       </div>
       {{ if .Site.Params.newsletter.enable }}
       <div class="col-md-4 col-sm-12">
-        <!-- <h5>Newsletter</h5> -->
+        <h5>Newsletter</h5>
         <p>Stay up to date with email notification</p>
         <form>
           <div class="form-group">
@@ -46,26 +46,29 @@
       </div>
       {{ end }}
     </div>
-  </div>
+  </div> -->
   <hr />
   <div class="container">
-    <div class="row text-left">
-      <div class="col-md-4">
+    <!-- <div class="text-center"> -->
+      <!-- <div class="col-md-4">
         <a id="theme" href="https://github.com/ridwanharts" target="#">
           <img src="/assets/images/inverted-logo.png">
           ridwanharts
         </a>
+      </div> -->
+      <div class="text-center">
+        {{ if .Site.Params.copyright }}{{ .Site.Params.copyright }}{{ else }}{{ end }}
+        <a id="hugo" href="https://gohugo.io/"> <br>Powered by Hugo</a>
       </div>
-      <div class="col-md-4 text-center">{{ if .Site.Params.copyright }}{{ .Site.Params.copyright }}{{ else }}© 2020 Copyright.{{ end }}</div>
-      <div class="col-md-4 text-right">
+      <!-- <div class="col-md-4 text-right">
         <a id="hugo" href="https://gohugo.io/">Powered by Hugo
-        <!-- <img
+        <img
           src="/assets/images/hugo-logo-wide.svg"
           alt="Hugo Logo"
           height="18"
-        /> -->
+        />
         </a>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </div>
 </footer>
