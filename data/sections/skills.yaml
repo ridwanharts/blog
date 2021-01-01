@@ -1,8 +1,8 @@
 # section information
 section:
   name: Skills
-  enable: true
-  weight: 2
+  enable: false
+  weight: 5
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -10,7 +10,7 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
+- name: Java
   icon: "images/skills/kubernetes.png"
   summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
   url: "https://kubernetes.io/"
